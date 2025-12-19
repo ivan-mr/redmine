@@ -43,6 +43,9 @@ gem "sanitize", "~> 7.0"
 # Triggering of Webhooks
 gem "rest-client", "~> 2.1"
 
+gem 'omniauth'
+gem 'omniauth-saml'
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem 'net-ldap', '~> 0.17.0'
