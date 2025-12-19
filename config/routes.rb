@@ -435,4 +435,7 @@ Rails.application.routes.draw do
     puts "An error occurred while loading the routes definition of #{plugin_name} plugin (#{plugin_routes_path}): #{e.message}."
     exit 1
   end
+
+  match '/auth/saml/callback', to: 'saml#callback', via: [:get, :post]
+  get '/auth/failure', to: 'saml#failure'
 end

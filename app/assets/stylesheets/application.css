@@ -209,8 +209,8 @@ pre, code {font-family: Consolas, Menlo, "Liberation Mono", Courier, monospace;}
 #login-form {margin:5em auto 2em auto; padding:20px; width:340px; background-color: var(--oc-orange-1); border-radius:4px; box-sizing: border-box;}
 #login-form label {display:block; margin-bottom:5px; font-weight:bold;}
 #login-form label[for=autologin] {font-weight:normal;}
-#login-form input {height: 29px;}
-#login-form input[type=text], #login-form input[type=password], #login-form input[type=submit] {display: block; width: 100%;}
+#login-form input, a.button {height: 29px;}
+#login-form input[type=text], #login-form input[type=password], #login-form input[type=submit], a.button {display: block; width: 100%;}
 #login-form input[type=text], #login-form input[type=password] {margin-bottom: 15px;}
 #login-form a.lost_password {float:inline-end; font-weight:normal;}
 #login-form h3 {text-align: center;}
@@ -615,8 +615,8 @@ div.square {
 .splitcontenttop {flex: 2; flex-basis: 100%;}
 
 form {display: inline;}
-input, select, button {vertical-align: middle; margin-top: 1px; margin-bottom: 1px; height: 24px; padding: 0 7px;}
-input, select, textarea, button { color: var(--oc-gray-9); background-color: var(--oc-white); border:1px solid var(--oc-gray-4); border-radius:3px; box-sizing: border-box;}
+input, select, button, a.button {vertical-align: middle; margin-top: 1px; margin-bottom: 1px; height: 24px; padding: 0 7px;}
+input, select, textarea, button, a.button { color: var(--oc-gray-9); background-color: var(--oc-white); border:1px solid var(--oc-gray-4); border-radius:3px; box-sizing: border-box;}
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -629,7 +629,7 @@ select {
   padding-right: 20px;
 }
 input[type="file"] {border: 0; padding-left: 0; padding-right: 0; height: initial; background-color: initial; }
-input[type="submit"], button[type="submit"] {
+input[type="submit"], button[type="submit"], a.button {
   -webkit-appearance: button;
   cursor: pointer;
   background-color: var(--oc-white);
@@ -639,7 +639,7 @@ input[type="submit"], button[type="submit"] {
   -o-transition: background-color 100ms linear;
   transition: background-color 100ms linear;
 }
-input[type="submit"]:hover, button[type="submit"]:hover {
+input[type="submit"]:hover, button[type="submit"]:hover, a.button:hover {
   background-color: var(--oc-gray-2);
 }
 
@@ -782,7 +782,7 @@ fieldset#date-range p { margin: 2px 0 2px 0; }
 
 #issue_is_private_wrap {float:right; margin-right:1em;}
 .toggle-multiselect { margin-right:5px; cursor:pointer;}
-.buttons { font-size: 0.9em; margin-bottom: 1.4em; margin-top: 1em; }
+.buttons, a.button { font-size: 0.9em; margin-bottom: 1.4em; margin-top: 1em; }
 
 .changeset-comments {margin-bottom:1em;}
 
@@ -2313,4 +2313,10 @@ th[role=columnheader]:not(.no-sort):hover:after {
 
 #sidebar .api-key-actions .copy-api-key-link svg {
   opacity: 1;
+}
+a.button {
+  text-decoration: none;
+  text-align: center;
+  line-height: 28px;
+  margin-bottom: 0.5em;
 }
