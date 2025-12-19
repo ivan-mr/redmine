@@ -237,6 +237,23 @@ default:
   #   - example.org
   #   - "*.example.com"
 
+  saml:
+    enabled: #[true, false]
+    assertion_consumer_service_url: # url for return from sso provider
+    issuer: # url for sso entityId 
+    idp_sso_target_url: # url for sso target provider
+    idp_cert: |
+      -----BEGIN CERTIFICATE-----
+      MIIINTPRODUCTIONEXAMPLE... [production certificate]
+      -----END CERTIFICATE-----
+    name_identifier_format: "urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress"
+    attribute_statements:
+      email: ['email', 'mail']
+      name: ['name', 'displayName']
+      first_name: ['first_name', 'firstName']
+      last_name: ['last_name', 'lastName']
+      groups: ['groups', 'memberOf']  # for maping roles
+
 # specific configuration options for production environment
 # that overrides the default ones
 production:

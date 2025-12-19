@@ -1205,6 +1205,7 @@ en:
   webhook_secret_info_html: If provided, Redmine will use this to create a hash signature that is sent with each delivery as the value of the X-Redmine-Signature-256 header.
 
   button_login: Login
+  button_login_saml: Login with SAML
   button_submit: Submit
   button_save: Save
   button_check_all: Check all

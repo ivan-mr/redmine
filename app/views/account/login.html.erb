@@ -17,6 +17,7 @@
     <label for="autologin"><%= check_box_tag 'autologin', 1, false, :tabindex => 4 %> <%= l(:label_stay_logged_in) %></label>
   <% end %>
   
+  <%= link_to l(:button_login_saml), "http://localhost:3000/auth/saml", class: 'button' %>
   <input type="submit" name="login" value="<%=l(:button_login)%>" tabindex="5" id="login-submit" />
   <% end %>
 </div>
